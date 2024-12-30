@@ -1,0 +1,102 @@
+header {
+  position: relative;
+}
+
+/* Search bar */
+.search-bar {
+  max-width: 500px;
+}
+
+/* Desktop navigation */
+.nav-link {
+  color: #6c757d;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-left: 1.5rem;
+}
+
+.nav-link:hover {
+  color: #000;
+}
+
+/* Mobile menu button */
+.mobile-menu-btn {
+  background: none;
+  border: none;
+  color: #ffc107;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+/* Mobile menu drawer */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -250px; /* Başlangıçta ekranın dışında */
+  width: 250px;
+  height: 100vh;
+  background-color: white;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+  transition: right 0.3s ease;
+  z-index: 1001;
+  padding-top: 60px;
+}
+
+.mobile-menu.show {
+  right: 0; /* Menü açıldığında */
+}
+
+/* Overlay */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.mobile-menu-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 1rem;
+  color: #6c757d;
+  text-decoration: none;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.mobile-menu-item:hover {
+  background-color: #f8f9fa;
+  color: #000;
+}
+
+/* Close button */
+.mobile-menu-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #6c757d;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .search-bar {
+    width: 50% !important;
+    margin: 0 1rem;
+  }
+}

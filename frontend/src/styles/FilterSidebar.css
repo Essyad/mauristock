@@ -1,0 +1,307 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Search Box Styling */
+  .search-box {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  
+  .search-box input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  .search-box input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Sidebar Styles */
+  .filter-sidebar {
+    background: linear-gradient(145deg, #ffffff, #f5f7fa);
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 
+      0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06),
+      inset 0 2px 4px rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Filter Section Headers */
+  .filter-sidebar h6 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #2d3748;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e2e8f0;
+  }
+  
+  .filter-sidebar .btn-link {
+    font-size: 1.5rem;
+    color: #333;
+    border: none;
+    background: none;
+  }
+  
+  /* Category and Subcategory Filters */
+  .category-filter,
+  .company-filter {
+    margin-bottom: 20px;
+  }
+  
+  .category-filter input,
+  .company-filter input {
+    margin-right: 10px;
+  }
+  
+  .category-filter label,
+  .company-filter label {
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+  .ms-3 {
+    margin-left: 20px;
+  }
+  
+  /* Apply Filter Button */
+  .apply-filter {
+    margin-top: 20px;
+  }
+  
+  .apply-filter button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .apply-filter button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    /* Sidebar */
+    .filter-sidebar {
+      width: 90%;
+      max-width: 300px;
+      padding: 15px;
+    }
+  
+    /* Search Box */
+    .search-box {
+      max-width: 100%;
+      margin: 10px 20px;
+    }
+  
+    .search-box input {
+      padding: 12px;
+      font-size: 14px;
+    }
+  
+    /* Filter Section */
+    .category-filter h6,
+    .company-filter h6 {
+      font-size: 1.1rem;
+    }
+  
+    .category-filter label,
+    .company-filter label {
+      font-size: 0.9rem;
+    }
+  
+    .apply-filter button {
+      font-size: 14px;
+    }
+  
+    /* Add a small shadow to sidebar when active */
+    .filter-sidebar.show {
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  /* Smaller Mobile Screens (Portrait, less than 480px) */
+  @media (max-width: 480px) {
+    /* Sidebar - smaller width */
+    .filter-sidebar {
+      width: 100%;
+      max-width: 100%;
+      padding: 10px;
+    }
+  
+    .filter-sidebar h6 {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
+  
+    .filter-sidebar .btn-link {
+      font-size: 1.3rem;
+      color: #333;
+    }
+  
+    /* Category Filters and Company Filters */
+    .category-filter label,
+    .company-filter label {
+      font-size: 0.85rem;
+    }
+  
+    .category-filter input,
+    .company-filter input {
+      margin-right: 5px;
+    }
+  
+    .ms-3 {
+      margin-left: 15px;
+    }
+  
+    /* Apply Filter Button */
+    .apply-filter button {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    /* Search Box */
+    .search-box input {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    /* Prevent excessive padding on smaller screens */
+    .search-box {
+      margin: 10px;
+      padding: 0;
+    }
+  }
+  
+  /* Tablet Landscape and Above (large screens) */
+  @media (min-width: 769px) {
+    /* Sidebar becomes larger on tablet and above */
+    .filter-sidebar {
+      width: 250px;
+      padding: 20px;
+    }
+  
+    .filter-sidebar.show {
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+  
+    /* Buttons & Inputs */
+    .apply-filter button {
+      padding: 15px;
+      font-size: 18px;
+    }
+  
+    .search-box input {
+      padding: 14px;
+      font-size: 16px;
+    }
+  }
+  /* styles.css */
+.filter-sidebar {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+}
+
+.filter-sidebar.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Prix Input Styles */
+.price-inputs {
+  display: flex;
+  gap: 10px;
+}
+
+.price-input-group {
+  flex: 1;
+}
+
+.price-input-group input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  background: #ffffff;
+}
+
+.price-input-group input:focus {
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+  outline: none;
+}
+
+.price-input-group input::placeholder {
+  color: #a0aec0;
+}
+
+/* Filter Action Buttons */
+.filter-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.btn {
+  flex: 0 1 auto;
+  min-width: 120px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #e2e8f0;
+  color: #4a5568;
+}
+
+.btn-outline:hover {
+  background: #f7fafc;
+  border-color: #cbd5e0;
+  transform: translateY(-1px);
+}
+
+.btn-apply {
+  background: linear-gradient(145deg, #3182ce, #4299e1);
+  border: none;
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(66, 153, 225, 0.2);
+}
+
+.btn-apply:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 8px -1px rgba(66, 153, 225, 0.3);
+}
+
+/* Icon Styles */
+.bi {
+  font-size: 1.1rem;
+}
+
